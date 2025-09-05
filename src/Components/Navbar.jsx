@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion} from 'framer-motion';
 import MobileNavbar from './MobileNav';
-import { useScrollTo } from './useScrollTo';
+import { useScrollTo } from './useScrollTo.jsx';
 
 const Navbar = () => {
   // const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
