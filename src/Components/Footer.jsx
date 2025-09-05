@@ -1,5 +1,5 @@
 import React from 'react'
-import useScrollTo from './useScrollTo.jsx';
+import useScrollTo from '../hooks/useScrollTo.jsx';g
 
 const Footer = () => {
     const scrollTo = useScrollTo();
