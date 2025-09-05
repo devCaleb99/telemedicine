@@ -7,9 +7,12 @@ export default defineConfig({
   plugins: [tailwindcss(), react()],
   build: {
     outDir: 'dist',
-    sourcemap: false
-  },
-  resolve: {
-    extensions: ['.js', '.jsx', '.ts', '.tsx'],
+    sourcemap: false,
+    rollupOptions: {
+      onwarn(warning, defaultHandler) {
+        if (warning.code === 'THIS_IS_UNDEFINED') return;
+        defaultHandler(warning);
+      }
+    }
   }
 })
